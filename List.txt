@@ -1,0 +1,28 @@
+顏色統一(不考慮特效)
+main background #F1DEC9 -> icon #C8B6A6
+compontent background #A4907C ->icon #F1DEC9
+border background #8D7B68
+textColor 黑 白
+
+//setColor
+$themeColor: #f1dec9;
+$compontentColor: #a4907c;
+$BorderColor: #8d7b68;
+$iconColor: #c8b6a6;
+$textLightColor: #ffffff;
+$textDarkColor: #000000;
+
+
+☆就算字是黑色還是要給他$textDarkColor
+10/24
+navbar完成  (做完有空幫moon icon+切換背景功能)
+projectView介面完成
+noteView介面完成
+
+明天先設定子路由
+
+
+文字大小
+大標題 2rem 
+副標題 1.5rem
+內容 1.2rem
