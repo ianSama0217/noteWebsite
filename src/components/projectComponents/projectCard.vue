@@ -3,19 +3,23 @@ import { RouterLink } from "vue-router";
 
 const props = defineProps({
   cardData: {
-    type: Object,
-    default: () => ({}),
+    type: Array,
+    default: () => [],
   },
 });
+
+const emits = defineEmits(["getIndex"]);
 </script>
 
 <template>
-  <div class="projectCard" v-for="item in cardData">
+  <div class="projectCard" v-for="(item, index) in cardData">
     <h3>{{ item.title }}</h3>
 
     <img :src="item.img" alt="aboutWebImg" />
 
-    <RouterLink :to="item.link" class="link">詳細資料</RouterLink>
+    <RouterLink @click="$emit('getIndex', index)" :to="item.link" class="link"
+      >詳細資料</RouterLink
+    >
   </div>
 </template>
 
