@@ -1,5 +1,16 @@
 <script setup>
 import { RouterLink } from "vue-router";
+import { storeToRefs } from "pinia";
+//匯入useStore資料
+import { useDisplayStore } from "../stores/isDisplay";
+
+const displayStore = useDisplayStore();
+const { ProjectCardDisplay } = storeToRefs(displayStore);
+const { isDisplayProjectCard } = displayStore;
+
+const displayProjectView = () => {
+  isDisplayProjectCard();
+};
 </script>
 
 <template>
@@ -9,7 +20,9 @@ import { RouterLink } from "vue-router";
     <div class="center">
       <RouterLink class="link" to="/">首頁</RouterLink>
       <RouterLink class="link" to="/note">筆記內容</RouterLink>
-      <RouterLink class="link" to="/project">作品集</RouterLink>
+      <RouterLink @click="displayProjectView" class="link" to="/project"
+        >作品集</RouterLink
+      >
     </div>
 
     <div class="iconbox">
@@ -43,7 +56,7 @@ $textDarkColor: #000000;
     font-size: 2.5rem;
   }
   .center {
-    width: 50%;
+    width: 40%;
     display: flex;
     justify-content: space-between;
     .link {
