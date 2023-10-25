@@ -3,6 +3,7 @@ import { defineStore } from "pinia";
 
 export const useDisplayStore = defineStore("display", () => {
   const ProjectCardDisplay = ref(true);
+  const NoteCardDisplay = ref(true);
 
   const isDisplayProjectCard = () => {
     ProjectCardDisplay.value = true;
@@ -11,5 +12,19 @@ export const useDisplayStore = defineStore("display", () => {
     ProjectCardDisplay.value = false;
   };
 
-  return { ProjectCardDisplay, isDisplayProjectCard, notDisplayProjectCard };
+  const isDisplayNoteCard = () => {
+    NoteCardDisplay.value = true;
+  };
+  const notDisplayNoteCard = () => {
+    NoteCardDisplay.value = false;
+  };
+
+  return {
+    ProjectCardDisplay,
+    isDisplayProjectCard,
+    notDisplayProjectCard,
+    NoteCardDisplay,
+    isDisplayNoteCard,
+    notDisplayNoteCard,
+  };
 });
