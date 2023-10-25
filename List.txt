@@ -12,6 +12,11 @@ $iconColor: #c8b6a6;
 $textLightColor: #ffffff;
 $textDarkColor: #000000;
 
+文字大小
+大標題 2rem 
+副標題 1.5rem
+內容 1.2rem
+
 
 ☆就算字是黑色還是要給他$textDarkColor
 10/24
@@ -19,10 +24,17 @@ navbar完成  (做完有空幫moon icon+切換背景功能)
 projectView介面完成
 noteView介面完成
 
-明天先設定子路由
+10/25
+完成project所有頁面(7個作品集)
+完成note所有頁面(6個筆記子路竟)
+完成footer
+
+待解決問題:
+navbar 作品集按鈕要debug(已完成)
+明天先設定子路由(project完成)
+projectView要解決切換頁面問題(已完成)
+之後切換頁面 path也要跟著改變
+在directives設定輸入物件(已完成)
+HomeView製作
 
 
-文字大小
-大標題 2rem 
-副標題 1.5rem
-內容 1.2rem
