@@ -1,9 +1,19 @@
 <script setup>
+import { RouterView } from "vue-router";
+import { storeToRefs } from "pinia";
+import { useDisplayStore } from "../stores/isDisplay.js";
 import noteCardGroup from "../components/noteComponents/noteCardGroup.vue";
+
+const displayStore = useDisplayStore();
+const { NoteCardDisplay } = storeToRefs(displayStore);
 </script>
 
 <template>
-  <div class="body">
+  <div class="notePage">
+    <RouterView />
+  </div>
+
+  <div class="body" v-if="NoteCardDisplay">
     <noteCardGroup />
   </div>
 </template>
