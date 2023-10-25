@@ -1,4 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
+//匯入project子路徑
+import singleProjectView from "../views/projectRouter/singleProjectView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -17,6 +19,12 @@ const router = createRouter({
       path: "/project",
       name: "project",
       component: () => import("../views/ProjectView.vue"),
+      children: [
+        {
+          path: "/project/:domain",
+          component: singleProjectView,
+        },
+      ],
     },
   ],
 });
