@@ -2,7 +2,7 @@ import { ref, computed } from "vue";
 import { defineStore } from "pinia";
 
 export const useNoteStore = defineStore("note", () => {
-  const DirectivesTitle = ref("template語法");
+  const DirectivesTitle = ref("Directives");
   //router to=""的值
   const DirectivesLink = ref([
     "/note/Directives/v-text",
@@ -34,7 +34,7 @@ export const useNoteStore = defineStore("note", () => {
 
   const RouterTitle = ref("Router");
   //router to=""的值
-  const RouterLink = ref([
+  const RouterLinkName = ref([
     "/note/Router/About router",
     "/note/Router/RouterLink",
     "/note/Router/Dynamic routing",
@@ -104,7 +104,7 @@ export const useNoteStore = defineStore("note", () => {
     DirectivesList,
     DirectivesLink,
     RouterTitle,
-    RouterLink,
+    RouterLinkName,
     RouterList,
     LifecycleTitle,
     LifecycleLink,
