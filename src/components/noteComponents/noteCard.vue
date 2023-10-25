@@ -1,5 +1,6 @@
 <script setup>
 import { RouterLink } from "vue-router";
+import { useDisplayStore } from "../../stores/isDisplay.js";
 
 const props = defineProps({
   noteTitle: {
@@ -15,12 +16,17 @@ const props = defineProps({
     default: () => [],
   },
 });
+
+const displayStore = useDisplayStore();
+
+const { notDisplayNoteCard } = displayStore;
 </script>
 
 <template>
   <div class="noteCard">
     <h3>{{ noteTitle }}</h3>
     <RouterLink
+      @click="notDisplayNoteCard"
       v-for="(item, index) in noteList"
       class="link"
       :to="noteLink[index]"

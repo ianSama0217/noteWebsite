@@ -10,7 +10,7 @@ const {
   DirectivesList,
   DirectivesLink,
   RouterTitle,
-  RouterLink,
+  RouterLinkName,
   RouterList,
   LifecycleTitle,
   LifecycleLink,
@@ -40,7 +40,7 @@ const {
     <NoteCard
       :noteTitle="RouterTitle"
       :noteList="RouterList"
-      :noteLink="RouterLink"
+      :noteLink="RouterLinkName"
       class="noteCard"
     />
     <!-- Lifecycle -->

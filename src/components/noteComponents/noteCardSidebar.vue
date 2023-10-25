@@ -1,16 +1,19 @@
 <script setup>
+import { RouterLink } from "vue-router";
 import { storeToRefs } from "pinia";
 import { useNoteStore } from "../../stores/note.js";
+import { useDisplayStore } from "../../stores/isDisplay.js";
 import NoteCard from "./noteCard.vue";
 
 const noteStore = useNoteStore();
+const displayStore = useDisplayStore();
 //解構noteStore內的資料
 const {
   DirectivesTitle,
   DirectivesList,
   DirectivesLink,
   RouterTitle,
-  RouterLink,
+  RouterLinkName,
   RouterList,
   LifecycleTitle,
   LifecycleLink,
@@ -25,10 +28,15 @@ const {
   PiniaLink,
   PiniaList,
 } = storeToRefs(noteStore);
+
+const { isDisplayNoteCard } = displayStore;
 </script>
 
 <template>
   <div class="column">
+    <RouterLink to="/note" @click="isDisplayNoteCard" class="link"
+      ><i class="fa-brands fa-vuejs"></i
+    ></RouterLink>
     <!-- Directives -->
     <NoteCard
       :noteTitle="DirectivesTitle"
@@ -40,7 +48,7 @@ const {
     <NoteCard
       :noteTitle="RouterTitle"
       :noteList="RouterList"
-      :noteLink="RouterLink"
+      :noteLink="RouterLinkName"
       class="noteCard"
     />
     <!-- Lifecycle -->
@@ -74,4 +82,17 @@ const {
   </div>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.column {
+  display: flex;
+  flex-direction: column;
+
+  .link {
+    align-self: center;
+    .fa-vuejs {
+      font-size: 10rem;
+      color: #4dba87;
+    }
+  }
+}
+</style>
