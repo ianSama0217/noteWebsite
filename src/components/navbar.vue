@@ -5,12 +5,7 @@ import { storeToRefs } from "pinia";
 import { useDisplayStore } from "../stores/isDisplay";
 
 const displayStore = useDisplayStore();
-const { ProjectCardDisplay } = storeToRefs(displayStore);
-const { isDisplayProjectCard } = displayStore;
-
-const displayProjectView = () => {
-  isDisplayProjectCard();
-};
+const { isDisplayProjectCard, isDisplayNoteCard } = displayStore;
 </script>
 
 <template>
@@ -19,8 +14,10 @@ const displayProjectView = () => {
 
     <div class="center">
       <RouterLink class="link" to="/">首頁</RouterLink>
-      <RouterLink class="link" to="/note">筆記內容</RouterLink>
-      <RouterLink @click="displayProjectView" class="link" to="/project"
+      <RouterLink @click="isDisplayNoteCard" class="link" to="/note"
+        >筆記內容</RouterLink
+      >
+      <RouterLink @click="isDisplayProjectCard" class="link" to="/project"
         >作品集</RouterLink
       >
     </div>
