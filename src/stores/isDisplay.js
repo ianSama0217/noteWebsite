@@ -5,8 +5,11 @@ export const useDisplayStore = defineStore("display", () => {
   const ProjectCardDisplay = ref(true);
 
   const isDisplayProjectCard = () => {
-    ProjectCardDisplay.value = !ProjectCardDisplay.value;
+    ProjectCardDisplay.value = true;
+  };
+  const notDisplayProjectCard = () => {
+    ProjectCardDisplay.value = false;
   };
 
-  return { ProjectCardDisplay, isDisplayProjectCard };
+  return { ProjectCardDisplay, isDisplayProjectCard, notDisplayProjectCard };
 });

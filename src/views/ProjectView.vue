@@ -10,14 +10,14 @@ const displayStore = useDisplayStore();
 //解構資料
 const { projectArray, page } = storeToRefs(projectStore);
 const { ProjectCardDisplay } = storeToRefs(displayStore);
-const { isDisplayProjectCard } = displayStore;
+const { notDisplayProjectCard } = displayStore;
 
 //取得projectCard index
 const setIndex = (index) => {
   page.value = index;
 
   //在這裡順便執行isDisplayProjectCard function
-  isDisplayProjectCard();
+  notDisplayProjectCard();
 };
 </script>
 
