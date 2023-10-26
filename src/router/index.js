@@ -64,6 +64,12 @@ const router = createRouter({
         },
       ],
     },
+    {
+      //防止路徑亂輸入
+      path: "/:domain(.*)*",
+      name: "error",
+      component: () => import("../views/ErrorView.vue"),
+    },
   ],
 });
 
