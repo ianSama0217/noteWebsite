@@ -46,6 +46,10 @@ $textDarkColor: #000000;
 
   .textContent {
     padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: 2px solid $BorderColor;
+    background-color: $textLightColor;
     .content {
       font-size: 1.2rem;
       color: $textDarkColor;
