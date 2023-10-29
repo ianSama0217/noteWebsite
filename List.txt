@@ -29,12 +29,33 @@ noteView介面完成
 完成note所有頁面(6個筆記子路竟)
 完成footer
 
+10/26
+完成homeView頁面
+完成contact頁面
+完成Error頁面
+
+10/29
+設定scollerY點擊不同的List會導覽到頁面指定位置
+
 待解決問題:
 navbar 作品集按鈕要debug(已完成)
 明天先設定子路由(project完成)
 projectView要解決切換頁面問題(已完成)
 之後切換頁面 path也要跟著改變
 在directives設定輸入物件(已完成)
-HomeView製作
+HomeView製作(已完成)
+落葉飄落動畫
+
+source:
+寄信
+https://www.minwt.com/webdesign-dev/js/22122.html
+https://tools.wingzero.tw/article/sn/658
+https://kknews.cc/zh-tw/code/kk8y55b.html#google_vignette
+
+程式小黑板
+https://socket.dev/npm/package/vue3-prism
+
+
+
 
 
