@@ -14,7 +14,6 @@ export const useNoteStore = defineStore("note", () => {
     "/note/Directives/v-on",
     "/note/Directives/v-model",
     "/note/Directives/v-bind",
-    "/note/Directives/v-model",
     "/note/Directives/v-slot",
   ]);
   //標籤內名稱<routerlink>DirectivesLinkName</routerlink>
@@ -28,8 +27,11 @@ export const useNoteStore = defineStore("note", () => {
     "v-on",
     "v-model",
     "v-bind",
-    "v-model",
     "v-slot",
+  ]);
+
+  const DirectivesScollerY = ref([
+    50, 500, 950, 1900, 2300, 2800, 3400, 3850, 4350, 4900,
   ]);
 
   const RouterTitle = ref("Router");
@@ -41,6 +43,8 @@ export const useNoteStore = defineStore("note", () => {
   ]);
   //標籤內名稱<routerlink>RouterDocLinkName</routerlink>
   const RouterList = ref(["About router", "RouterLink", "Dynamic routing"]);
+
+  const RouterScollerY = ref([50, 800, 3400]);
 
   const LifecycleTitle = ref("Life Cycle");
   //router to=""的值
@@ -64,6 +68,8 @@ export const useNoteStore = defineStore("note", () => {
     "onBeforeUnmount()",
   ]);
 
+  const LifeCycleScollerY = ref([50, 575, 1150, 1800, 2400, 2750, 3150]);
+
   const CompositionAPITitle = ref("Composition API");
   //router to=""的值
   const CompositionAPILink = ref([
@@ -82,6 +88,8 @@ export const useNoteStore = defineStore("note", () => {
     "watch()",
   ]);
 
+  const CompositionAPIScollerY = ref([50, 550, 1125, 1800, 2250]);
+
   const ComponentTitle = ref("Compontent");
   //router to=""的值
   const ComponentLink = ref([
@@ -93,6 +101,8 @@ export const useNoteStore = defineStore("note", () => {
   //標籤內名稱<routerlink>ComponentLinkName</routerlink>
   const ComponentList = ref(["props", "emit", "provide", "inject"]);
 
+  const ComponentScollerY = ref([50, 1350, 2550, 3200]);
+
   const PiniaTitle = ref("Pinia");
   //router to=""的值
   const PiniaLink = ref(["/note/Pinia/About Pinia"]);
@@ -103,18 +113,23 @@ export const useNoteStore = defineStore("note", () => {
     DirectivesTitle,
     DirectivesList,
     DirectivesLink,
+    DirectivesScollerY,
     RouterTitle,
     RouterLinkName,
     RouterList,
+    RouterScollerY,
     LifecycleTitle,
     LifecycleLink,
     LifecycleList,
+    LifeCycleScollerY,
     CompositionAPITitle,
     CompositionAPILink,
     CompositionAPIList,
+    CompositionAPIScollerY,
     ComponentTitle,
     ComponentLink,
     ComponentList,
+    ComponentScollerY,
     PiniaTitle,
     PiniaLink,
     PiniaList,
