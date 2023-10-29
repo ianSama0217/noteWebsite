@@ -15,18 +15,31 @@ const props = defineProps({
     type: Array,
     default: () => [],
   },
+  noteScollerY: {
+    type: Array,
+    default: () => [],
+  },
 });
 
 const displayStore = useDisplayStore();
 
 const { notDisplayNoteCard } = displayStore;
+
+//點擊指定RouterLink，跳轉至新頁面指定位置(y軸)
+const scollerTo = (y) => {
+  window.scroll(0, y);
+  // console.log(y);
+
+  //關閉彈跳視窗
+  notDisplayNoteCard();
+};
 </script>
 
 <template>
   <div class="noteCard">
     <h3>{{ noteTitle }}</h3>
     <RouterLink
-      @click="notDisplayNoteCard"
+      @click="scollerTo(noteScollerY[index])"
       v-for="(item, index) in noteList"
       class="link"
       :to="noteLink[index]"

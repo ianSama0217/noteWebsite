@@ -9,18 +9,23 @@ const {
   DirectivesTitle,
   DirectivesList,
   DirectivesLink,
+  DirectivesScollerY,
   RouterTitle,
   RouterLinkName,
   RouterList,
+  RouterScollerY,
   LifecycleTitle,
   LifecycleLink,
   LifecycleList,
+  LifeCycleScollerY,
   CompositionAPITitle,
   CompositionAPILink,
   CompositionAPIList,
+  CompositionAPIScollerY,
   ComponentTitle,
   ComponentLink,
   ComponentList,
+  ComponentScollerY,
   PiniaTitle,
   PiniaLink,
   PiniaList,
@@ -34,6 +39,7 @@ const {
       :noteTitle="DirectivesTitle"
       :noteList="DirectivesList"
       :noteLink="DirectivesLink"
+      :noteScollerY="DirectivesScollerY"
       class="noteCard"
     />
     <!-- Router -->
@@ -41,6 +47,7 @@ const {
       :noteTitle="RouterTitle"
       :noteList="RouterList"
       :noteLink="RouterLinkName"
+      :noteScollerY="RouterScollerY"
       class="noteCard"
     />
     <!-- Lifecycle -->
@@ -48,6 +55,7 @@ const {
       :noteTitle="LifecycleTitle"
       :noteList="LifecycleList"
       :noteLink="LifecycleLink"
+      :noteScollerY="LifeCycleScollerY"
       class="noteCard"
     />
     <!-- CompositionAPI -->
@@ -55,6 +63,7 @@ const {
       :noteTitle="CompositionAPITitle"
       :noteList="CompositionAPIList"
       :noteLink="CompositionAPILink"
+      :noteScollerY="CompositionAPIScollerY"
       class="noteCard"
     />
     <!-- Component -->
@@ -62,6 +71,7 @@ const {
       :noteTitle="ComponentTitle"
       :noteList="ComponentList"
       :noteLink="ComponentLink"
+      :noteScollerY="ComponentScollerY"
       class="noteCard"
     />
     <!-- Pinia -->

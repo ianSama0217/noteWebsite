@@ -12,29 +12,41 @@ const {
   DirectivesTitle,
   DirectivesList,
   DirectivesLink,
+  DirectivesScollerY,
   RouterTitle,
   RouterLinkName,
   RouterList,
+  RouterScollerY,
   LifecycleTitle,
   LifecycleLink,
   LifecycleList,
+  LifeCycleScollerY,
   CompositionAPITitle,
   CompositionAPILink,
   CompositionAPIList,
+  CompositionAPIScollerY,
   ComponentTitle,
   ComponentLink,
   ComponentList,
+  ComponentScollerY,
   PiniaTitle,
   PiniaLink,
   PiniaList,
 } = storeToRefs(noteStore);
 
 const { isDisplayNoteCard } = displayStore;
+
+const scollerYtop = () => {
+  window.scroll(0, 0);
+
+  //讓noteCardGroup v-if為true
+  isDisplayNoteCard();
+};
 </script>
 
 <template>
   <div class="column">
-    <RouterLink to="/note" @click="isDisplayNoteCard" class="link"
+    <RouterLink to="/note" @click="scollerYtop" class="link"
       ><i class="fa-brands fa-vuejs"></i
     ></RouterLink>
     <!-- Directives -->
@@ -42,6 +54,7 @@ const { isDisplayNoteCard } = displayStore;
       :noteTitle="DirectivesTitle"
       :noteList="DirectivesList"
       :noteLink="DirectivesLink"
+      :noteScollerY="DirectivesScollerY"
       class="noteCard"
     />
     <!-- Router -->
@@ -49,6 +62,7 @@ const { isDisplayNoteCard } = displayStore;
       :noteTitle="RouterTitle"
       :noteList="RouterList"
       :noteLink="RouterLinkName"
+      :noteScollerY="RouterScollerY"
       class="noteCard"
     />
     <!-- Lifecycle -->
@@ -56,6 +70,7 @@ const { isDisplayNoteCard } = displayStore;
       :noteTitle="LifecycleTitle"
       :noteList="LifecycleList"
       :noteLink="LifecycleLink"
+      :noteScollerY="LifeCycleScollerY"
       class="noteCard"
     />
     <!-- CompositionAPI -->
@@ -63,6 +78,7 @@ const { isDisplayNoteCard } = displayStore;
       :noteTitle="CompositionAPITitle"
       :noteList="CompositionAPIList"
       :noteLink="CompositionAPILink"
+      :noteScollerY="CompositionAPIScollerY"
       class="noteCard"
     />
     <!-- Component -->
@@ -70,6 +86,7 @@ const { isDisplayNoteCard } = displayStore;
       :noteTitle="ComponentTitle"
       :noteList="ComponentList"
       :noteLink="ComponentLink"
+      :noteScollerY="ComponentScollerY"
       class="noteCard"
     />
     <!-- Pinia -->
