@@ -46,6 +46,8 @@ export const useNoteContentStore = defineStore("noteContent", () => {
       </div>
     </li>
 </ul>`,
+      content:
+        "v-if和v-for放在放在不同標籤使用，將v-if另外放在v-for裡面的一個容器",
     },
     vElseIf: {
       title: "v-else-if",

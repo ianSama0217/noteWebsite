@@ -11,7 +11,7 @@ import linkBtn from "../components/homeComponents/linkBtn.vue";
 <template>
   <div class="body">
     <div class="profileImg">
-      <img src="../../public/homeImg/helloween-giwawa.jpg" alt="profile-img" />
+      <img src="../../public/homeImg/tongue-giwawa.jpg" alt="profile-img" />
     </div>
 
     <div class="textContent">
@@ -32,7 +32,7 @@ $iconColor: #c8b6a6;
 $textLightColor: #ffffff;
 $textDarkColor: #000000;
 .body {
-  padding: 0 10vw;
+  padding: 0 5vw;
   display: flex;
   justify-content: space-between;
 
@@ -42,7 +42,7 @@ $textDarkColor: #000000;
     overflow: hidden;
     img {
       height: 30vw;
-      width: 30vw;
+      width: 35vw;
     }
   }
 
